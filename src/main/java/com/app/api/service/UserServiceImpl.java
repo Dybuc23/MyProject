@@ -82,7 +82,7 @@ public class UserServiceImpl implements UserService,UserDetailsService {
 	}*/
 
 	@Override
-	public Users findById(Integer userId) {
+	public Users findById(Long userId) {
 		return repository.findById(userId).orElse(null);
 	}
 

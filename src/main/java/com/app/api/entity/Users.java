@@ -21,7 +21,7 @@ public class Users implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private Long userId;
 	
     @Column(unique = true, nullable = false)
 	private String username;
@@ -41,7 +41,7 @@ public class Users implements Serializable{
     @Column(name="addressuser")
     private String address;
     
-    @Column(name="numberuser")
+    @Column(name="phonenumber")
     private String number;
     
     @Column(name="emailuser")

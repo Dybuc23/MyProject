@@ -53,10 +53,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.antMatchers("/proveedor/editar/*").access("hasRole('USER') and hasRole('ADMIN')")
 			.antMatchers("/proveedor/borrar/*").access("hasRole('USER') and hasRole('ADMIN')")
 			.antMatchers("/user/list").access("hasRole('USER')")
+			.antMatchers("/").access("hasRole('ADMIN')")
 			//.antMatchers("/user/register").access("hasRole('ADMIN')")
 			.antMatchers("/user/edit/*").access("hasRole('ADMIN')")
-			.antMatchers("/user/deactivate/*").access("hasRole('ADMIN')")
-			.antMatchers("/user_role/register").access("hasRole('ADMIN')");
+			.antMatchers("/user/deactivate/*").access("hasRole('ADMIN')");
+			//.antMatchers("/user_role/register").access("hasRole('ADMIN')");
 			
 		//app rest
 		http.authorizeRequests().and().csrf().disable();

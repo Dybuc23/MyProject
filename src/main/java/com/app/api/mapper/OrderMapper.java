@@ -35,8 +35,8 @@ public class OrderMapper {
                 order.getClient().getName(),
                 order.getClient().getBusinessname(),
                 order.getPaydocument(),
-                order.getClient().getTypeclient().getName(),
-                order.getClient().getTypeclient().getItemsPays().size(),
+                order.getClient().getBusinessKind().getName(),
+                order.getClient().getBusinessKind().getItemsPays().size(),
                 order.isStatus());
     }
 }

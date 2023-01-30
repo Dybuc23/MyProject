@@ -55,7 +55,8 @@ public class ClientRestController {
             clientDb.setRuc(clientEdit.getRuc());
             clientDb.setAddress(clientEdit.getAddress());
             clientDb.setOffice(clientEdit.getOffice());
-            clientDb.setNumber(clientEdit.getNumber());
+            clientDb.setCellnumber(clientEdit.getCellnumber());
+            clientDb.setDatebirth(clientEdit.getDatebirth());
             clientDb.setTelephone(clientEdit.getTelephone());
             clientDb.setSex(clientEdit.getSex());
             clientDb.setEmail(clientEdit.getEmail());

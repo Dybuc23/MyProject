@@ -7,13 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.app.api.entity.Users;
 import com.app.api.mapper.UserMapper;
@@ -28,7 +22,12 @@ public class UserRestController {
 
 	public UserRestController() {		
 	}
-	
+	@PostMapping("/login")
+	public ResponseEntity login(@RequestHeader Users users){
+		users.getUsername();
+		users.getPassword();
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 	@GetMapping("/list")
 	public ResponseEntity<?> list_GET()
 	{
@@ -51,7 +50,7 @@ public class UserRestController {
 	}
 	
 	@PutMapping("/edit/{userId}")
-	public ResponseEntity<?> edit_PUT(@RequestBody Users userEdit,@PathVariable Integer userId)
+	public ResponseEntity<?> edit_PUT(@RequestBody Users userEdit,@PathVariable Long userId)
 	{
 		Users userDb=userService.findById(userId);
 		// Para actualizar y encriptar...
@@ -77,7 +76,7 @@ public class UserRestController {
 	}
 	
 	@PutMapping("/anull/{userId}")
-	public ResponseEntity<?> anull_PUT(@PathVariable Integer userId,@RequestBody Users userEdit)
+	public ResponseEntity<?> anull_PUT(@PathVariable Long userId,@RequestBody Users userEdit)
 	{
 		Users userDb=userService.findById(userId);
 		
@@ -92,7 +91,7 @@ public class UserRestController {
 	}
 	
 	@GetMapping("/search/{userId}")
-	public ResponseEntity<?> search_GET(@PathVariable Integer userId)
+	public ResponseEntity<?> search_GET(@PathVariable Long userId)
 	{
 		Users userDb=userService.findById(userId);
 		

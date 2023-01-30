@@ -10,7 +10,7 @@ import com.app.api.entity.Users;
 @NoArgsConstructor
 @Data
 public class UserMapper {
-	private Integer userId;
+	private Long userId;
 	private String username;
 	private String password;
 	private String name;

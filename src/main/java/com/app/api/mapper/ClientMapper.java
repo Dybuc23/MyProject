@@ -24,7 +24,8 @@ public class ClientMapper {
     private String sex;
     private LocalDate datebirth;
     private boolean status;
-    private String typeclient;
+    private String businessK;
+    private String type;
 
     public ClientMapper(Client client) {
         this(client.getClientId(),
@@ -34,12 +35,13 @@ public class ClientMapper {
                 client.getRuc(),
                 client.getAddress(),
                 client.getOffice(),
-                client.getNumber(),
+                client.getCellnumber(),
                 client.getTelephone(),
                 client.getEmail(),
                 client.getSex(),
                 client.getDatebirth(),
                 client.isStatus(),
-                client.getTypeclient().getName());
+                client.getBusinessKind().getName(),
+                client.getType());
     }
 }
