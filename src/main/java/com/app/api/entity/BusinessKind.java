@@ -27,7 +27,7 @@ public class BusinessKind implements Serializable {
         @Column(unique = true, nullable = false)
         private String name;
 
-        @OneToOne(mappedBy = "businessKind")
+        @OneToOne(mappedBy = "businessKind", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
         private Client client;
 
         @OneToMany(mappedBy = "condition")

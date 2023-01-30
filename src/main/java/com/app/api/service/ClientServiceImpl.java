@@ -37,6 +37,7 @@ public class ClientServiceImpl implements ClientService{
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Collection<Client> findAll() {
         return repository.findAll();
     }
