@@ -51,7 +51,7 @@ public class Client implements Serializable {
     @Column(name="status_client")
     private boolean status;
     @OneToOne
-    @JoinColumn(name = "business_id",nullable = false,unique = true)
+    @JoinColumn(name = "business_id",nullable = false)
     private BusinessKind businessKind;
 
     @OneToMany(mappedBy = "client")
