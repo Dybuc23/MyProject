@@ -16,11 +16,11 @@ A RESTful backend service for sales management, built with **Java 11**, **Spring
 
 ## Features
 
-- 🔐 **Authentication & Authorization** — secured endpoints using Spring Security
-- 🗄️ **Database integration** — full persistence with JPA entities and MySQL
-- 🏗️ **Layered architecture** — clean separation of Controller → Service → Repository
-- ⚡ **Lombok** — reduced boilerplate with annotations like `@Data`, `@Builder`, `@AllArgsConstructor`
-- 🔄 **Spring DevTools** — hot reload enabled for local development
+- **Authentication & Authorization** — secured endpoints using Spring Security
+- **Database integration** — full persistence with JPA entities and MySQL
+- **Layered architecture** — clean separation of Controller → Service → Repository
+- **Lombok** — reduced boilerplate with annotations like `@Data`, `@Builder`, `@AllArgsConstructor`
+- **Spring DevTools** — hot reload enabled for local development
 
 ## Project Structure
 
